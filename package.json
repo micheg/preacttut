@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "status": "git status",
+    "push": "git push origin main"
   },
   "author": "Michelangelo Giacomelli",
   "license": "ISC",
