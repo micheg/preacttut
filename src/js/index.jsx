@@ -3,22 +3,12 @@
 // libs
 import { h, render } from 'preact';
 
+// fontawesome icons
 import '@fortawesome/fontawesome-free';
 import '@fortawesome/fontawesome-free/css/all.css';
 
-// components
-import Header from './comp/header';
+// app
+import App from './comp/app';
 
-const App = () =>
-{
-    return (
-        <div class="app">
-            <Header/>
-            <div class="page" id="doc-wrapper">
-                Hello World!
-            </div>
-        </div>
-    );
-};
-
+// render all
 render(<App />, document.getElementById('root'));
