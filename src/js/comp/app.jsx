@@ -4,31 +4,41 @@ import { h, render } from 'preact';
 import { useState } from 'preact/hooks';
 
 // components
+import Hello from './hello';
 import Header from './header';
 import Footer from './footer';
 import Counter from './counter';
 import Clock from './clock';
 
+// route
+import Router from 'preact-router';
+
 const App = () =>
 {
     const [current, setCurrent] = useState('Main');
+
+    const page_mapping =
+    {
+        '/': 'Main',
+        '/clock': 'Clock',
+        '/counter': 'Counter'
+    };
+
+    let handleRoute = (e) =>
+    {
+        if(e.url in page_mapping) setCurrent(page_mapping[e.url]);
+    };
+
     return (
         <div class="app">
             <Header current={current}/>
-            <div class="page">
-                Hello World!
-                <Counter start="99"/>
-            </div>
-            <hr/>
-            <button class="w3-btn w3-white w3-border w3-border-green w3-round-xlarge"
-                    onClick={() => setCurrent('pressed')}>
-                Change Title
-            </button>
-            <hr/>
-            <Clock/>
+            <Router onChange={handleRoute}>
+                <Hello name="world" path="/" />
+                <Clock path="/clock" />
+                <Counter path="/counter" /> 
+            </Router>
             <Footer/>
         </div>
     );
 };
-
 export default App

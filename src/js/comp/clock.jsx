@@ -30,8 +30,10 @@ class Clock extends Component
     {
         let time = new Date(this.state.time).toLocaleTimeString();
         return (
-            <div class="w3-container w3-margin-top w3-center">
-                <span>{time}</span>
+            <div class="page">
+                <div class="w3-container w3-margin-top w3-center">
+                    <span>{time}</span>
+                </div>
             </div>
         );
     }
