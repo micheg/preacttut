@@ -1,0 +1,23 @@
+{
+  "name": "PreactTut",
+  "version": "1.0.0",
+  "description": "learning preact",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "author": "Michelangelo Giacomelli",
+  "license": "ISC",
+  "dependencies": {
+    "js": "^0.1.0",
+    "preact": "^10.5.5",
+    "preact-router": "^3.2.1"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-clean-dist": "0.0.6",
+    "parcel-plugin-html-externals": "^0.2.0",
+    "sass": "^1.27.0"
+  }
+}
