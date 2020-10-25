@@ -15,7 +15,8 @@
     "@fortawesome/fontawesome-free": "^5.15.1",
     "js": "^0.1.0",
     "preact": "^10.5.5",
-    "preact-router": "^3.2.1"
+    "preact-router": "^3.2.1",
+    "w3-css": "^4.1.0"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
