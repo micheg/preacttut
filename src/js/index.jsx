@@ -3,6 +3,9 @@
 // libs
 import { h, render } from 'preact';
 
+import '@fortawesome/fontawesome-free';
+import '@fortawesome/fontawesome-free/css/all.css';
+
 // components
 import Header from './comp/header';
 
