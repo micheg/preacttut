@@ -1,12 +1,16 @@
 /*jshint esversion: 6 */
 import { h } from 'preact';
+import {Animated} from "preact-animated-css";
 
 const Hello = (props) =>
 {
     return (
-        <div class="page">
-            <h4>{props.name}</h4>
-        </div>
+
+        <Animated animationIn="fadeInDownBig" animateOnMount={true} isVisible={true}>
+            <div class="page">
+                <h4>{props.name}</h4>
+            </div>
+        </Animated>
     );
 };
 

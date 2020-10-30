@@ -9,10 +9,22 @@ import Header from './header';
 import Footer from './footer';
 import Counter from './counter';
 import Clock from './clock';
+import Stars from './stars';
+import Menu from './menu';
+import STRCounter from './store_counter';
 
 // route
 import Router from 'preact-router';
 
+import logo from '/img/logo.png';
+
+// a bit of style
+import "/css/oops.css";
+
+// state management 
+import { StoreContext } from 'storeon/preact';
+
+import {store} from '../store/store';
 const App = () =>
 {
     const [current, setCurrent] = useState('Main');
@@ -21,24 +33,65 @@ const App = () =>
     {
         '/': 'Main',
         '/clock': 'Clock',
-        '/counter': 'Counter'
+        '/counter': 'Counter',
+        '/stars': 'Stars'
     };
+
+    const main_menu = [
+        {
+            route: '/',
+            name: 'Main',
+            icon: 'house-user'
+        },
+        {
+            route: '/clock',
+            name: 'Clock',
+            icon: 'clock'
+        },
+        {
+            route: '/counter',
+            name: 'Counter',
+            icon: 'plus-circle'
+        },
+        {
+            route: '/stars',
+            name: 'Stars',
+            icon: 'star'
+        },
+        {
+            route: '/scounter',
+            name: 'State Counter',
+            icon: 'plus-circle'
+        }
+    ];
+
 
     let handleRoute = (e) =>
     {
         if(e.url in page_mapping) setCurrent(page_mapping[e.url]);
     };
 
+    function menuClickHanlder(evt)
+    {
+        console.log('AAAAA');
+        window.$E = evt;
+    }
+
     return (
-        <div class="app">
-            <Header current={current}/>
-            <Router onChange={handleRoute}>
-                <Hello name="world" path="/" />
-                <Clock path="/clock" />
-                <Counter path="/counter" /> 
-            </Router>
-            <Footer/>
-        </div>
+        <StoreContext.Provider value={store}>
+            <div class="app">
+                <Header current={current} onStateChange={menuClickHanlder}/>
+                <Router onChange={handleRoute}>
+                    <Hello name="world" path="/" />
+                    <Clock path="/clock" />
+                    <Counter path="/counter" />
+                    <Stars repo="test" path="/stars" />
+                    <STRCounter path="/scounter" />
+                </Router>
+                <Footer/>
+                <Menu links={main_menu} logo={logo} links={main_menu}/>
+            </div>
+        </StoreContext.Provider>
     );
 };
 export default App

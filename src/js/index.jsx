@@ -3,6 +3,8 @@
 // libs
 import { h, render } from 'preact';
 import 'w3-css/w3.css';
+import 'animate.css';
+
 
 // fontawesome icons
 import '@fortawesome/fontawesome-free';

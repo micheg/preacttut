@@ -13,9 +13,13 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
+    "animate.css": "3.5.2",
+    "context": "^1.1.0",
     "js": "^0.1.0",
     "preact": "^10.5.5",
+    "preact-animated-css": "github:micheg/preact-animated-css",
     "preact-router": "^3.2.1",
+    "storeon": "^3.1.1",
     "w3-css": "^4.1.0"
   },
   "devDependencies": {

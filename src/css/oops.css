@@ -1,0 +1,28 @@
+#hmenu {
+    margin-top:10px;
+}
+#main_nav {
+    /*display:none;*/
+    width:75%;
+}
+.page {
+    margin-top:60px;
+}
+#logo {
+    width: 120px;
+}
+#main_page {
+    display: block;
+}
+.nav_btn {
+    border-bottom: 1px solid gray !important;
+    color: gray;
+}
+
+nav.w3-bar-block
+{
+    width:75%;
+    max-width:600px;
+    height: 100vh;
+    background-color:white;
+}
