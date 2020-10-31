@@ -23,9 +23,21 @@
     "w3-css": "^4.1.0"
   },
   "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-preact": "^1.1.2",
+    "eslint-config-standard": "^16.0.1",
+    "eslint-config-standard-preact": "^1.1.6",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-standard": "^4.0.2",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-clean-dist": "0.0.6",
     "parcel-plugin-html-externals": "^0.2.0",
     "sass": "^1.27.0"
+  },
+  "eslintConfig": {
+    "extends": "preact"
   }
 }

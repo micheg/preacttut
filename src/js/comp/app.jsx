@@ -1,6 +1,6 @@
-/*jshint esversion: 6 */
+/* jshint esversion: 6 */
 // libs
-import { h, render } from 'preact';
+import { h } from 'preact';
 import { useState } from 'preact/hooks';
 
 // components
@@ -16,12 +16,12 @@ import STRCounter from './store_counter';
 // route
 import Router from 'preact-router';
 
-import logo from '/img/logo.png';
+import logo from '../../img/logo.png';
 
 // a bit of style
-import "/css/oops.css";
+import '../../css/oops.css';
 
-// state management 
+// state management
 import { StoreContext } from 'storeon/preact';
 
 import {store} from '../store/store';
@@ -65,10 +65,9 @@ const App = () =>
         }
     ];
 
-
-    let handleRoute = (e) =>
+    const handleRoute = (e) =>
     {
-        if(e.url in page_mapping) setCurrent(page_mapping[e.url]);
+        if (e.url in page_mapping) setCurrent(page_mapping[e.url]);
     };
 
     function menuClickHanlder(evt)
@@ -76,22 +75,21 @@ const App = () =>
         console.log('AAAAA');
         window.$E = evt;
     }
-
     return (
         <StoreContext.Provider value={store}>
-            <div class="app">
-                <Header current={current} onStateChange={menuClickHanlder}/>
+            <div class='app'>
+                <Header current={current} onStateChange={menuClickHanlder} />
                 <Router onChange={handleRoute}>
-                    <Hello name="world" path="/" />
-                    <Clock path="/clock" />
-                    <Counter path="/counter" />
-                    <Stars repo="test" path="/stars" />
-                    <STRCounter path="/scounter" />
+                    <Hello name='world' path='/' />
+                    <Clock path='/clock' />
+                    <Counter path='/counter' />
+                    <Stars repo='test' path='/stars' />
+                    <STRCounter path='/scounter' />
                 </Router>
-                <Footer/>
-                <Menu links={main_menu} logo={logo} links={main_menu}/>
+                <Footer />
+                <Menu links={main_menu} logo={logo} />
             </div>
         </StoreContext.Provider>
     );
 };
-export default App
+export default App;
