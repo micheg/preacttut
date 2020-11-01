@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 import { h } from 'preact';
-import {Animated} from "preact-animated-css";
+import { Animated } from '@micheg/preact-animated-css-fork';
 
 const Hello = (props) =>
 {
@@ -14,4 +14,4 @@ const Hello = (props) =>
     );
 };
 
-export default Hello
+export default Hello;

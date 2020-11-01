@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 import { useStoreon } from 'storeon/preact';
 import { h } from 'preact';
-import {Animated} from "preact-animated-css";
+import { Animated } from '@micheg/preact-animated-css-fork';
 
 let STRCounter = (props) =>
 {

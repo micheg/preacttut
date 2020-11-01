@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 import { h } from 'preact';
 import { useState } from 'preact/hooks';
-import {Animated} from "preact-animated-css";
+import { Animated } from '@micheg/preact-animated-css-fork';
 
 function Counter(props)
 {
