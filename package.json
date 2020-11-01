@@ -1,5 +1,5 @@
 {
-  "name": "PreactTut",
+  "name": "preact-tutorial",
   "version": "1.0.0",
   "description": "learning preact",
   "main": "index.js",
@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
-    "animate.css": "3.5.2",
+    "animate.css": "4.1.1",
     "context": "^1.1.0",
     "js": "^0.1.0",
     "preact": "^10.5.5",

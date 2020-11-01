@@ -3,7 +3,7 @@
 // libs
 import { h, render } from 'preact';
 import 'w3-css/w3.css';
-import 'animate.css';
+import 'animate.css/animate.compat.css';
 
 // fontawesome icons
 import '@fortawesome/fontawesome-free';
