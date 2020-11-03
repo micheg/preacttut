@@ -24,7 +24,7 @@ import '../../css/oops.css';
 // state management
 import { StoreContext } from 'storeon/preact';
 
-import {store} from '../store/store';
+import { store } from '../store/store';
 const App = () =>
 {
     const [current, setCurrent] = useState('Main');
@@ -70,7 +70,7 @@ const App = () =>
         if (e.url in page_mapping) setCurrent(page_mapping[e.url]);
     };
 
-    function menuClickHanlder(evt)
+    function menuClickHanlder (evt)
     {
         console.log('AAAAA');
         window.$E = evt;
