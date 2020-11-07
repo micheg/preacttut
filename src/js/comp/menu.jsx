@@ -20,7 +20,7 @@ const Menu = (props) =>
                     Object.entries(props.links).map(([key, val]) =>
                         (
                             <a key={key} className="nav_btn w3-bar-item w3-button w3-wide"
-                                href={val.route} onClick={() => dispatch('menu/close')}>
+                              href={val.route} onClick={() => dispatch('menu/close')}>
                                 <i class={`fa fa-${val.icon}`} aria-hidden="true" />
                                 &nbsp;{val.name}
                             </a>
