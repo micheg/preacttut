@@ -1,5 +1,3 @@
-/* eslint jsx-quotes: ["error", "prefer-double"] */
-
 import { h } from 'preact';
 import { useStoreon } from 'storeon/preact';
 
