@@ -1,9 +1,7 @@
-/*jshint esversion: 6 */
-
+import 'preact/debug';
 // libs
 import { h, render } from 'preact';
 import 'w3-css/w3.css';
-//import 'animate.css/animate.compat.css';
 import 'animate.css';
 
 // fontawesome icons

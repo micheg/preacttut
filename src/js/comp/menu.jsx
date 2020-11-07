@@ -1,4 +1,3 @@
-/* jshint esversion: 6 */
 import { h } from 'preact';
 import { useStoreon } from 'storeon/preact';
 import { Animated } from '@micheg/preact-animated-css-fork';
