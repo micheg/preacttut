@@ -77,14 +77,14 @@ const App = () =>
     }
     return (
         <StoreContext.Provider value={store}>
-            <div class='app'>
+            <div class="app">
                 <Header current={current} onStateChange={menuClickHanlder} />
                 <Router onChange={handleRoute}>
-                    <Hello name='world' path='/' />
-                    <Clock path='/clock' />
-                    <Counter path='/counter' />
-                    <Stars repo='test' path='/stars' />
-                    <STRCounter path='/scounter' />
+                    <Hello name="world" path="/" />
+                    <Clock path="/clock" />
+                    <Counter path="/counter" />
+                    <Stars repo="test" path="/stars" />
+                    <STRCounter path="/scounter" />
                 </Router>
                 <Footer />
                 <Menu links={main_menu} logo={logo} />
